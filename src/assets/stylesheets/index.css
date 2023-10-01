@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'orbitron';
+    src: url('../fonts/orbitron-variablefont_wght-webfont.woff2') format('woff2'),
+        url('../fonts/orbitron-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'space_mono';
+    src: url('../fonts/spacemono-bold-webfont.woff2') format('woff2'),
+        url('../fonts/spacemono-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'space_mono', sans-serif;
+    --platinum: #e8e8e8ff;
+    --rose-taupe: #a26769ff;
+    --zomp: #519e8aff;
+    --eerie-black: #252422ff;
+    --african-violet: #8c7aa9ff;
+}
+
+body{
+    overflow-x: hidden;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--eerie-black);
+}
+
+button{
+    position: absolute;
+    bottom: 3vh;
+    left: 43vw;
+    height: 5vh;
+    width: 11vw;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+#table{
+    position: absolute;
+    top: 15vh;
+    left: 4vw;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 89vw;
+}
+
+tr{
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+}
+
+th{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2vw;
+    font-family: 'orbitron', sans-serif;
+    color: var(--platinum);
+}
+td{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2vw;
+    position: relative;
+    color: #A7A0A7;
+}
+
+tr, table{
+    border-top: 0.15vw solid #A7A0A7;
+    border-bottom: 0.15vw solid #A7A0A7;
+}
