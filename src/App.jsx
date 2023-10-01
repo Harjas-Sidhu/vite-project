@@ -3,7 +3,7 @@ function App() {
   const localhost = window.location.href;
 
   function sendRequest(){
-    fetch('https://'+localhost+':8000', {method: "GET"})
+    fetch(localhost+':8000', {method: "GET"})
     .then((response) => {
         if(!response.ok){
           console.log(response.status);
