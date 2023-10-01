@@ -1,6 +1,6 @@
 function App() {
 
-  const localhost = window.location.hostname;
+  const localhost = window.location.href;
 
   function sendRequest(){
     fetch('https://'+localhost+':8000', {method: "GET"})
@@ -27,7 +27,7 @@ function App() {
 
     sendRequest();
 
-    fetch('https://'+localhost+':5173/src/assets/output/stats-roundrobin.csv')
+    fetch(localhost+'/src/assets/output/stats-roundrobin.csv')
       .then(data => { return data.text() })
       .then(text => { return text.toString().split("\n"); })
       .then(text => { let arr = text; lines = lines.concat(arr); })
@@ -60,7 +60,7 @@ function App() {
         }
       });
 
-    fetch('https://'+localhost+':5173/src/assets/output/extra-info.txt')
+    fetch(localhost+':5173/src/assets/output/extra-info.txt')
       .then(text => { return text.text() })
       .then(text => { return text.split(","); })
       .then(text => { 
